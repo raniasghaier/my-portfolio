@@ -1,17 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rania Sghaier - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-Time to publish your website
-Let’s use GitHub to publish your website. If you are curious about GitHub, check this out: What Exactly Is GitHub Anyway?
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="images/profile-picture.jpg" alt="Rania Sghaier" class="profile-picture">
+            <h1>Rania Sghaier</h1>
+            <p class="tagline">Nursing Student at UPSAT</p>
+        </div>
+    </section>
 
-In this tutorial, we will only use one feature of GitHub: the publishing service. But bear in mind that GitHub is far more than that! By the way, we made a full tutorial about it here: Git and GitHub for Beginners if you want to get further into versioning and team collaboration using git and GitHub 🙂(extra!).
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>Hello! I'm Rania Sghaier, a first-year nursing student at UPSAT. I'm passionate about healthcare and dedicated to making a positive impact in people's lives through nursing care.</p>
+            <div class="skills">
+                <h3>Skills & Interests</h3>
+                <ul>
+                    <li>Patient Care</li>
+                    <li>Medical Knowledge</li>
+                    <li>Healthcare Management</li>
+                    <li>Team Collaboration</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-0. Check your files and folders’ names
-First check that all your files and folders are correctly named:
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="images/project1.png" alt="Academic Achievements">
+                <h3>Academic Achievements</h3>
+                <p>Maintaining excellent academic performance in medical studies at UPSAT.</p>
+                <a href="#" class="button">View Details</a>
+            </div>
+            <div class="project-card">
+                <img src="images/project2.png" alt="Student Life">
+                <h3>Student Life</h3>
+                <p>Active participation in university activities and student organizations.</p>
+                <a href="#" class="button">View Details</a>
+            </div>
+        </div>
+    </section>
 
-✅ index.html ✅ style.css ✅ images ✅profile-picture.png
-❌ Index.html ❌ Style.css ❌ Images ❌ My profile picture!!.png
-No space, no upcase letters, no accents, no special characters! Only downcase letters and - to separate words.
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <a href="mailto:your.email@example.com" class="button">Email Me</a>
+        </div>
+    </section>
 
-1. Create a Github account
-Let’s sign up and create your account on Github! Follow the steps below to join the Github’s community:
+    <footer>
+        <p>&copy; 2024 Rania Sghaier Portfolio. All rights reserved.</p>
+    </footer>
 
-Let’s follow this naming convention for your username: yourfirstname-
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html> 
